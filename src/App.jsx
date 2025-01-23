@@ -1,15 +1,31 @@
+import { useState } from 'react';
 import './App.css'
 
 function App() {
   
-  let post = '강남 우동 맛집';
+  let post = '역삼 우동 맛집';
+  let [글제목, b] = useState('여자 코트 추천');
+  let [간식, c] = useState('겨울 간식 추천');
+  let [노래, d] = useState('노래 플레이리스트 추천'); //자주 바뀔거 같은 html은 state로 만들어주는게 좋다.
+
   
   return (
     <div className="App">
       <div className="black-nav">
-        <h4>블로그</h4>
+        <h4>LES_Blog</h4>
       </div>
-      <h4>{ post }</h4>
+      <div className="list">
+        <h4>{ 글제목 }</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{ 간식 }</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{ 노래 }</h4>
+        <p>2월 17일 발행</p>
+      </div>
     </div>
   );
 }
