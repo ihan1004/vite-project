@@ -1,3 +1,5 @@
+/* eslint-disable */ // eslint를 사용하지 않겠다는 뜻
+
 import { useState } from 'react';
 import './App.css'
 
@@ -7,7 +9,11 @@ function App() {
   let [글제목, b] = useState('여자 코트 추천');
   let [간식, c] = useState('겨울 간식 추천');
   let [노래, d] = useState('노래 플레이리스트 추천'); //자주 바뀔거 같은 html은 state로 만들어주는게 좋다.
+  lset [따봉] = useState(0); //좋아요 useState
 
+  function 함수(){
+    console.log(1);  
+  }
   
   return (
     <div className="App">
@@ -15,7 +21,7 @@ function App() {
         <h4>LES_Blog</h4>
       </div>
       <div className="list">
-        <h4>{ 글제목 }</h4>
+        <h4>{ 글제목 } <span onClick={ 함수 }>👍</span>{따봉}</h4>
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
