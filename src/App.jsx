@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   
   let post = '역삼 우동 맛집';
-  let [글제목, 글제목변경] = useState(['여자 코트 추천', '겨울 간식 추천', '노래 플레이리스트 추천']);//자주 바뀔거 같은 html은 state로 만들어주는게 좋다.
+  let [글제목, 글제목변경] = useState(['여자 코트 추천', '겨울 간식 추천', '겨울 노래']);//자주 바뀔거 같은 html은 state로 만들어주는게 좋다.
   let [따봉, 따봉변경] = useState(0); //좋아요 useState
 
   return (
