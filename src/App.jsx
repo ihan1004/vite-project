@@ -7,6 +7,7 @@ function App() {
   let post = '역삼 우동 맛집';
   let [글제목, 글제목변경] = useState(['여자 코트 추천', '겨울 간식 추천', '겨울 노래']);//자주 바뀔거 같은 html은 state로 만들어주는게 좋다.
   let [따봉, 따봉변경] = useState(0); //좋아요 useState
+   let [modal, setModal] = useState(false); // 페이지 로드 시 모달창이 닫혀있는 상태
 
   return (
     
@@ -30,11 +31,29 @@ function App() {
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
-        <h4>{ 글제목[2] }</h4>
+        <h4 onClick={() => { setModal(!modal) }}>{ 글제목[2] }</h4>
         <p>2월 17일 발행</p>
       </div>
+            {
+                modal == true ? <Modal/> : null
+            }
     </div>
   );
 }
+/*
+* 컴포넌트 만드는 법
+* 1. function() 만들고
+* 2. return() 안에 html 담기
+* 3. <함수명></함수명> 쓰기*/
+function Modal(){
+    return(
+        <div className="modal">
+            <h4>title</h4>
+            <p>날짜</p>
+            <p>상세내용</p>
+        </div>
+    )
+}
+
 
 export default App
