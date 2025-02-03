@@ -54,8 +54,11 @@ function App() {
         )
       })
       }
+      <button onClick={() => { setModalTitle(0)}}>글제목0</button>
+      <button onClick={() => { setModalTitle(1)}}>글제목1</button>
+      <button onClick={() => { setModalTitle(2)}}>글제목2</button>
      {
-        modal == true ? <Modal 글제목변경={글제목변경} modalTilte={modalTilte} 글제목={글제목}/> : null
+        modal == true ? <Modal modalTilte={modalTilte} 글제목={글제목}/> : null
       }
     </div>
 
